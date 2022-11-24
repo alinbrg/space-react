@@ -1,7 +1,12 @@
-import "./App.css";
+import "./App.scss";
+import Main from "./Routes/Main";
 
 function App() {
-	return <div className="App"></div>;
+	return (
+		<main className="App">
+			<Main />
+		</main>
+	);
 }
 
 export default App;

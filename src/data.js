@@ -1,4 +1,5 @@
-const data = {
+/* eslint-disable import/no-anonymous-default-export */
+export default {
 	destinations: [
 		{
 			name: "Moon",
