@@ -1,6 +1,6 @@
 import Page from "../Components/Page";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Scrollbar, A11y } from "swiper";
+import { Pagination } from "swiper";
 import "swiper/css/pagination";
 
 import data from "../data";
@@ -42,9 +42,9 @@ export default function Destination() {
 					</h3>
 					<Swiper
 						slidesPerView={1}
-						spaceBetween={100}
+						spaceBetween={10}
 						pagination={pagination}
-						modules={[Pagination, Scrollbar, A11y]}
+						modules={[Pagination]}
 						className="destination-swiper d-flex justify-content-between align-items-center"
 					>
 						{renderedDestinations}

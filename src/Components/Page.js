@@ -2,9 +2,9 @@ import Header from "./Header";
 
 export default function Page({ children }) {
 	return (
-		<div>
+		<main>
 			<Header />
 			{children}
-		</div>
+		</main>
 	);
 }
