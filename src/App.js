@@ -1,3 +1,5 @@
+import "swiper/css";
+import "swiper/css/pagination";
 import "./App.scss";
 import Main from "./Routes/Main";
 import Destination from "./Routes/Destination";
