@@ -3,7 +3,7 @@ export default function DestinationCard(dest) {
 	return (
 		<div className="select-dest d-flex justify-content-between">
 			<div className="dest-img">
-				<img className="w-100" src={dest.images.png} alt={dest.name} />
+				<img className="w-100" src={dest.images.webp} alt={dest.name} />
 			</div>
 			<div className="dest-desc">
 				<div className="dest-details">
