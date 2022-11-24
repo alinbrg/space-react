@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	font-size: 100%;
 	font-family: "Courier New", Courier, monospace, Arial, Helvetica, sans-serif;
+	transition: all 0.3s;
 }
 a {
 	text-decoration: none;
@@ -226,6 +227,9 @@ header {
 		border-radius: 50%;
 		background-color: var(--white);
 		cursor: pointer;
+		&:hover {
+			box-shadow: 0 0 0 100px hsla(0, 0%, 100%, 0.1);
+		}
 	}
 	.space {
 		span {
@@ -251,7 +255,7 @@ header {
 			text-align: center;
 		}
 		.explore:hover {
-			box-shadow: 0 0 0 100px hsla(0, 0%, 100%, 0.1);
+			box-shadow: none;
 		}
 
 		.main-section-content {

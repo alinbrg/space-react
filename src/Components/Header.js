@@ -1,40 +1,41 @@
 import logo from "../assets/shared/logo.svg";
 import burger from "../assets/shared/icon-hamburger.svg";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
 	return (
 		<header>
 			<div className="container d-flex justify-content-between align-items-center">
 				<div className="logo">
-					<a href="#">
+					<Link to="/">
 						<img className="w-100" src={logo} alt="logo" />
-					</a>
+					</Link>
 				</div>
 				<nav className="">
 					<ul className="d-flex justify-content-between align-items-center">
 						<li>
-							<a href="/" className="">
+							<NavLink to="/">
 								<span>00 </span>
 								<span>HOME</span>
-							</a>
+							</NavLink>
 						</li>
 						<li>
-							<a href="" className="">
+							<NavLink to="/destination">
 								<span>01 </span>
 								<span>DESTINATION</span>
-							</a>
+							</NavLink>
 						</li>
 						<li>
-							<a href="" className="">
+							<NavLink to="/crew">
 								<span>02 </span>
 								<span>CREW</span>
-							</a>
+							</NavLink>
 						</li>
 						<li>
-							<a href="" className="">
+							<NavLink to="/technology">
 								<span>03 </span>
 								<span>TECHNOLOGY</span>
-							</a>
+							</NavLink>
 						</li>
 					</ul>
 				</nav>

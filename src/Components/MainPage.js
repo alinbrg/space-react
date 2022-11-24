@@ -1,8 +1,8 @@
 export default function MainPage() {
 	return (
-		<section class="main-section p-absolute bg-style">
-			<div class="d-flex justify-content-between content-container p-absolute main-section-content">
-				<div class="space w-50">
+		<section className="main-section p-absolute bg-style">
+			<div className="d-flex justify-content-between content-container p-absolute main-section-content">
+				<div className="space w-50">
 					<span>SO, YOU WANT TO TRAVEL TO</span>
 					<h1>SPACE</h1>
 					<p>
@@ -12,7 +12,7 @@ export default function MainPage() {
 						world experience!
 					</p>
 				</div>
-				<div class="explore d-flex align-items-center justify-content-center">
+				<div className="explore d-flex align-items-center justify-content-center">
 					EXPLORE
 				</div>
 			</div>
