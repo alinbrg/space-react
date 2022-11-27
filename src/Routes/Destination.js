@@ -5,11 +5,12 @@ import "swiper/css/pagination";
 
 import data from "../data";
 import DestinationCard from "../Components/DestinationCard";
+import { useState } from "react";
 
 export default function Destination() {
 	const { destinations } = data;
-
-	const renderedDestinations = destinations.map((dest) => {
+	const [destin, setDestin] = useState(destinations);
+	const renderedDestinations = destin.map((dest) => {
 		return (
 			<SwiperSlide
 				className="d-flex justify-content-between align-items-center"
@@ -24,11 +25,7 @@ export default function Destination() {
 		clickable: true,
 		renderBullet: function (index, className) {
 			return (
-				'<span class="' +
-				className +
-				'">' +
-				destinations[index].name +
-				"</span>"
+				'<span class="' + className + '">' + destin[index].name + "</span>"
 			);
 		},
 	};
