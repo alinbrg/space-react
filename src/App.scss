@@ -665,7 +665,7 @@ header {
 	}
 
 	padding-top: var(--section-pt);
-	background-image: var(--destination-bg);
+	background-image: var(--tech-bg);
 
 	.tech-content {
 		width: 96%;
@@ -675,7 +675,8 @@ header {
 	.tech-img {
 		max-width: 50%;
 		width: 100%;
-		height: 100%;
+		height: 50%;
+
 		flex-shrink: 0;
 		margin-left: 5%;
 		img {
@@ -726,7 +727,7 @@ header {
 		}
 		.tech-img {
 			max-width: 100%;
-			height: 410px;
+			height: 500px;
 			margin-left: 0;
 			margin-bottom: 50px;
 		}
