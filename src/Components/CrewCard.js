@@ -1,14 +1,14 @@
 export default function CrewCard(props) {
 	return (
 		<>
-			<div class="info">
-				<span class="d-block">{props.role}</span>
+			<div className="info">
+				<span className="d-block">{props.role}</span>
 				<h2>{props.name}</h2>
 				<p>{props.bio}</p>
 				{/* { props.images.png } */}
 			</div>
 
-			<div class="crew-img">
+			<div className="crew-img">
 				<img src={props.images.png} alt={props.name} />
 			</div>
 		</>

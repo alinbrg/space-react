@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css/pagination";
 
-import "swiper/css/pagination";
 import data from "../data";
 import CrewCard from "../Components/CrewCard";
 import { useState } from "react";
@@ -30,7 +29,7 @@ export default function Crew() {
 
 	return (
 		<Page>
-			<section class="crew-slider bg-style p-absolute">
+			<section className="crew-slider bg-style p-absolute">
 				<div className="crew-content">
 					<h3>
 						<span>02 </span>Meet Your Crew
@@ -40,7 +39,6 @@ export default function Crew() {
 						slidesPerView={1}
 						spaceBetween={10}
 						pagination={pagination}
-						clickable={true}
 						modules={[Pagination]}
 					>
 						{renderedCrew}
