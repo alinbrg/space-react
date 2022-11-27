@@ -20,7 +20,7 @@
 @media (max-width: 1025px) {
 	:root {
 		--header-ml: 39px;
-		--header-mt: 0;
+		--header-mt: 30px;
 		--main-bg: url(./assets/home/background-home-tablet.jpg);
 		--destination-bg: url(./assets/destination/background-destination-tablet.jpg);
 		--crew-bg: url(./assets/crew/background-crew-tablet.jpg);
@@ -116,6 +116,7 @@ html {
 main {
 	// width: 100vw;
 	min-height: 100vh;
+	overflow: hidden;
 	position: relative;
 }
 
@@ -126,7 +127,7 @@ main {
 }
 header {
 	padding-top: var(--header-mt);
-	position: absolute;
+	position: fixed;
 
 	width: 100%;
 	z-index: 100;
@@ -172,20 +173,6 @@ header {
 			position: absolute;
 			bottom: -36px;
 		}
-		&.active {
-			display: block;
-			position: absolute;
-			right: 0;
-			top: 0;
-			padding-top: 120px;
-			height: 100vh;
-			.router-link-active:after {
-				display: none;
-			}
-			ul {
-				flex-direction: column;
-			}
-		}
 	}
 }
 
@@ -204,7 +191,23 @@ header {
 			height: 40px;
 		}
 		nav {
-			display: none;
+			// display: none;
+			position: absolute;
+			top: 0;
+			right: -100vw;
+			padding: 0;
+			padding-top: 100px;
+			padding-right: 50px;
+			padding-left: 30px;
+			height: 100vh;
+			ul {
+				flex-direction: column;
+				align-items: start !important;
+			}
+			&.active {
+				right: 0;
+				position: fixed;
+			}
 		}
 	}
 	.burger {
@@ -452,9 +455,11 @@ header {
 		.dest-stat {
 			justify-content: center;
 		}
-		.dest-img {
-			max-width: 100%;
-			margin-bottom: 50px;
+		.destination-content {
+			.dest-img {
+				max-width: 100%;
+				margin-bottom: 50px;
+			}
 		}
 	}
 }
@@ -475,9 +480,11 @@ header {
 			height: unset;
 		}
 
-		.dest-img {
-			max-width: 70%;
-			margin-bottom: 20px;
+		.destination-content {
+			.dest-img {
+				max-width: 70%;
+				margin-bottom: 20px;
+			}
 		}
 		.dest-desc {
 			p {
@@ -493,12 +500,12 @@ header {
 					}
 				}
 			}
-		}
-		.dest-stat {
-			flex-direction: column;
-			div:first-child {
-				margin-right: 0 !important;
-				margin-bottom: 20px;
+			.dest-stat {
+				flex-direction: column;
+				div:first-child {
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
 			}
 		}
 	}
@@ -567,26 +574,35 @@ header {
 	}
 }
 @media (max-width: 1024px) {
-	.crew-slider .swiper-pagination {
-		bottom: 0% !important;
-		left: 50% !important;
-		transform: translateX(-50%);
-		text-align: center !important;
-	}
-	.crew-content {
-		.d-flex {
-			flex-direction: column;
-			align-items: center;
-			justify-content: end;
+	.crew-slider {
+		.swiper-pagination {
+			bottom: 0% !important;
+			left: 50% !important;
+			transform: translateX(-50%);
+			text-align: center !important;
+			span {
+				width: 20px;
+				height: 20px;
+			}
 		}
-		.crew-img {
-			max-width: 100%;
-			height: 60%;
-			margin-top: 20px;
-		}
-		.info {
-			width: 100%;
-			text-align: center;
+		.crew-content {
+			// height: 80%;
+			.d-flex {
+				flex-direction: column;
+				align-items: center;
+				justify-content: start;
+			}
+			.crew-img {
+				max-width: 100%;
+
+				height: 60%;
+				max-height: 550px;
+				margin-top: 20px;
+			}
+			.info {
+				width: 100%;
+				text-align: center;
+			}
 		}
 	}
 }
@@ -594,19 +610,27 @@ header {
 	.crew-slider {
 		.crew-content {
 			.crew-img {
-				height: 40%;
+				height: 350px;
 				margin-top: 0;
+				img {
+					height: 100%;
+					// object-fit: cover;
+				}
 			}
 			.d-flex {
 				flex-direction: column-reverse;
 			}
 			.swiper-slide {
-				margin-bottom: 100px;
-				height: unset !important;
+				margin-bottom: 30px;
+				// height: unset !important;
 			}
 			.info {
 				margin-top: 10%;
 			}
+		}
+		.swiper-pagination {
+			position: static;
+			transform: none;
 		}
 	}
 }
@@ -702,7 +726,7 @@ header {
 		}
 		.tech-img {
 			max-width: 100%;
-			height: 310px;
+			height: 410px;
 			margin-left: 0;
 			margin-bottom: 50px;
 		}
@@ -717,15 +741,17 @@ header {
 	}
 }
 @media (max-width: 768px) {
-	.technology-section .swiper-pagination span {
-		width: 40px;
-		height: 40px;
-	}
-	h3 {
-		padding: 0;
-		text-align: center;
-	}
-	.tech-img {
-		height: 200px;
+	.technology-section {
+		.swiper-pagination span {
+			width: 40px;
+			height: 40px;
+		}
+		h3 {
+			padding: 0;
+			// text-align: center;
+		}
+		.tech-img {
+			height: 300px;
+		}
 	}
 }
